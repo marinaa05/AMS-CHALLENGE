@@ -175,3 +175,4 @@ if __name__ == "__main__":
     input2 = torch.randn(size=(1, 1, 144, 144, 144))  # (B, C, D, H, W)
     output = reg(input1,input2)
     print(output.shape)
+
