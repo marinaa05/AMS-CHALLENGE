@@ -12,7 +12,7 @@ import numpy as np
 from timm.models.layers import DropPath, trunc_normal_
 
 from mmcv.runner import load_checkpoint
-from mmcv.cnn import ConvModule
+from mmcv.cnn import ConvModule  # pip install mmcv==1.3.7
 from mmaction.utils import get_root_logger
 
 from functools import reduce, lru_cache
