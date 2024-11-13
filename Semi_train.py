@@ -18,15 +18,18 @@ from utils.utils import EMA, AverageMeter, to_categorical, dice
 import numpy as np
 
 class RSeg(object):
-    def __init__(self, k=0, n_channels=1, n_classes=8, lr=1e-4, epoches=200, iters=200, batch_size=1, model_name='PC_XMorpher_heart_0'):
+    def __init__(self, k=0, n_channels=1, n_classes=8, lr=1e-4, epoches=10, iters=20, batch_size=1, model_name='PC_XMorpher_heart_0'): # 200 200
         super(RSeg, self).__init__()
         self.k = k
         self.n_classes = n_classes
         self.epoches = epoches
         self.iters=iters
         self.lr = lr
-        train_labeled_unlabeled_dir = 'data/train_labeled_unlabeled'
-        train_unlabeled_unlabeled_dir = 'data/train_unlabeled_unlabeled'
+        data = loadmat('data/one_example/0_1.mat')
+        #train_labeled_unlabeled_dir = 'data/train_labeled_unlabeled'
+        train_labeled_unlabeled_dir = data['fix_image']
+        #train_unlabeled_unlabeled_dir = 'data/train_unlabeled_unlabeled'
+        train_unlabeled_unlabeled_dir =  data['mov_image']
         test_labeled_labeled_dir = 'data/test'
 
         self.results_dir = 'results'
