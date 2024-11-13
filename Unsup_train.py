@@ -22,7 +22,7 @@ class RSeg(object):
         self.n_classes = n_classes
         self.epoches = epoches
         self.iters=iters
-        train_labeled_unlabeled_dir = 'data/train_labeled_unlabeled'
+        train_labeled_unlabeled_dir = 'data/train_labeled_unlabeled'  # ni objavljeno na Githubu
         train_unlabeled_unlabeled_dir = 'data/train_unlabeled_unlabeled'
         test_labeled_labeled_dir = 'data/test'
 
