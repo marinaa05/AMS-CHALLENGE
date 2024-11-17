@@ -515,7 +515,7 @@ class BasicLayerUp(nn.Module):
         for blk in self.blocks:
             next_x = blk(x, xa)
             next_xa = blk(xa, x)
-            x = next_a
+            x = next_x
             xa = next_xa
 
         if self.upsample is not None:
