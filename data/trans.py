@@ -5,7 +5,7 @@ import numpy as np
 import torch, sys, random, math
 from scipy import ndimage
 
-from .rand import Constant, Uniform, Gaussian
+from rand import Constant, Uniform, Gaussian
 from scipy.ndimage import rotate
 from skimage.transform import rescale, resize
 
